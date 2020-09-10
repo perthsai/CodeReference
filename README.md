@@ -7,3 +7,7 @@ Convert List value to Set of ids \n
     List<Case> CaseList =[select id from Case ];
     Set<Id> CaseIds = (new Map<Id,Case>(CaseList)).keySet();
     System.debug('The total case id is ' + CaseIds.size());
+ 
+#Convert SOQL into Map List 
+ 
+ Map<ID, Contact> m = new Map<ID, Contact>([SELECT Id, LastName FROM Contact]);
